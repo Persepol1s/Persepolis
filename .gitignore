@@ -215,5 +215,9 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+
+#############
+## Persepolis
+#############
 .DS_Store
 *.DS_Store
