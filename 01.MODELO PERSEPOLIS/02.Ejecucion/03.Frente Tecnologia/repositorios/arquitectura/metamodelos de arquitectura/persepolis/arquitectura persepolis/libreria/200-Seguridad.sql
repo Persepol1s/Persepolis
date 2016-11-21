@@ -89,8 +89,6 @@ COMMIT;
 -- Data for table `persepolis.servicio.vertical`.`solucion`
 -- -----------------------------------------------------
 
-
-
 START TRANSACTION;
 USE `persepolis.servicio.vertical`;
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion, 'SOLX200 AAE', 'Alertas y Alarmas') on duplicate key update solucion = rtrim(solucion);
@@ -240,8 +238,6 @@ where solucion_idsolucion in (
 and idrequerimiento_caracteristica > 0;
 
 COMMIT;
-
-
 
 
 -- -----------------------------------------------------
