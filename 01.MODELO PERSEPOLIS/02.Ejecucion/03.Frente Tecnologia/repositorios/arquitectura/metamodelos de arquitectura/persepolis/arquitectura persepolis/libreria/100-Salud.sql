@@ -152,11 +152,12 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `persepolis.proyecto.solucion`.`requerimiento_caracteristica`
+-- Data for table `persepolis.servicio.vertical`.`solucion`
 -- -----------------------------------------------------
+
 START TRANSACTION;
-USE `persepolis.proyecto.solucion`;
-INSERT INTO `persepolis.proyecto.solucion`.`requerimiento_caracteristica` VALUES (@caracteristica, 'Funcionalidad', 'SOLX21 PRES');
+USE `persepolis.servicio.vertical`;
+INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion, 'SOLX100 PES', 'Prestación de Servicio') on duplicate key update solucion = rtrim(solucion);
 
 COMMIT;
 
@@ -314,15 +315,15 @@ INSERT INTO `persepolis.proyecto.solucion`.`implementacion` VALUES (@implementac
 COMMIT;
 
 
-/*
+
 -- -----------------------------------------------------
 -- Data for table `persepolis.proyecto.solucion`.`requerimiento_caracteristica_has_implementacion`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `persepolis.proyecto.solucion`;
-INSERT INTO `persepolis.proyecto.solucion`.`requerimiento_caracteristica_has_implementacion` (`requerimiento_caracteristica_idrequerimiento_caracteristica`, `implementacion_idimplementacion`) 
-VALUES (44, 4);
+INSERT INTO `persepolis.proyecto.solucion`.`requerimiento_caracteristica_has_implementacion` VALUES (@caracteristica, @implementacion);
 
+COMMIT;
 
 
 -- -----------------------------------------------------
@@ -330,8 +331,7 @@ VALUES (44, 4);
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `persepolis.proyecto.solucion`;
-INSERT INTO `persepolis.proyecto.solucion`.`proveedor` (`idproveedor`, `proveedor`, `implementacion_idimplementacion`, `direccion`, `telefono`, `contacto`, `correo`) 
-VALUES (5, 'NEC', 4, 'Bogota DC', '55555555', 'John Appleseed', 'ja@nec.com');
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_proveedor` VALUES (@implementacion, 2);
 
 COMMIT;
 
@@ -342,9 +342,32 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `persepolis.proyecto.solucion`;
-INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` (`implementacion_idimplementacion`, `componente_idcomponente`) 
-VALUES (4, 1);
-
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (1, @implementacion, 1, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (2, @implementacion, 2, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (3, @implementacion, 3, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (4, @implementacion, 4, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (5, @implementacion, 3, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (6, @implementacion, 6, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (7, @implementacion, 4, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (8, @implementacion, 7, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (9, @implementacion, 9, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (10, @implementacion, 10, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (11, @implementacion, 11, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (12, @implementacion, 12, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (13, @implementacion, 12, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (14, @implementacion, 12, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (15, @implementacion, 15, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (16, @implementacion, 13, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (17, @implementacion, 15, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (18, @implementacion, 18, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (19, @implementacion, 19, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (20, @implementacion, 33, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (21, @implementacion, 20, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (22, @implementacion, 21, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (23, @implementacion, 21, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (24, @implementacion, 22, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (25, @implementacion, 23, 1);
+INSERT INTO `persepolis.proyecto.solucion`.`implementacion_has_componente` VALUES (26, @implementacion, 24, 1);
 
 COMMIT;
-*/
+
