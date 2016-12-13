@@ -106,7 +106,7 @@ INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+2,  'SOL
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+3,  'SOLX203 OBC', 'Observatorio de Contravenciones') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+4,  'SOLX204 RAP', 'Red de Apoyo a Vigilantes') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+5,  'SOLX205 CTE', 'Control Tenencia de Armas') on duplicate key update solucion = rtrim(solucion);
-INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+6,  'SOLX206 INF', 'Mejoramiento Red de Vigilancia') on duplicate key update solucion = rtrim(solucion);
+INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+6,  'SOLX206 VVI', 'Mejoramiento Red de Vigilancia') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+7,  'SOLX207 AVL', 'Seguimiento vehicular (AVL)') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+8,  'SOLX208 CAI', 'Centro Atención Inmediata Móvil (CAI)') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+9,  'SOLX209 HOS', 'Gestión de Hospitales Girardota') on duplicate key update solucion = rtrim(solucion);
