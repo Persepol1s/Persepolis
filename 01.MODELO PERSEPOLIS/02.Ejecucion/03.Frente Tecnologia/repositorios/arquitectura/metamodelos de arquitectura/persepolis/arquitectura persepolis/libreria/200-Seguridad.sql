@@ -100,7 +100,7 @@ COMMIT;
 
 START TRANSACTION;
 USE `persepolis.servicio.vertical`;
-INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+0,  'SOLX200 AAE', 'Alertas y Alarmas') on duplicate key update solucion = rtrim(solucion);
+INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+0,  'SOLX200 AAE', 'Alertas y Alarmas Ciudadanas') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+1,  'SOLX201 COM', 'Comisarias') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+2,  'SOLX202 JVE', 'Juntas Vecinales') on duplicate key update solucion = rtrim(solucion);
 INSERT INTO `persepolis.servicio.vertical`.`solucion` VALUES (@solucion+3,  'SOLX203 OBC', 'Observatorio de Contravenciones') on duplicate key update solucion = rtrim(solucion);
